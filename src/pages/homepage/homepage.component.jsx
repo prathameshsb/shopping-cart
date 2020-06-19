@@ -3,9 +3,9 @@ import Directory from '../../component/directory/directory.component';
 import './homepage.style.scss';
 
 
-export const Homepage = props => (
+export const Homepage = () => (
     <div className = "homepage">
-        <Directory/>
+        <Directory />
     </div>
 )
  
