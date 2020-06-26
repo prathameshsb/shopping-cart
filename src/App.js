@@ -3,18 +3,43 @@ import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import { Homepage } from './pages/homepage/homepage.component';
 import Header from "./component/header/header.component";
+import SignInAndRegister from './pages/sign-in-and-register/sign-in-and-register.component';
 import ShopPage from './pages/shop/shop.component';
+import { auth } from './firebase/firebase.utils';
 
-function App() {
-  return (
-    <div className="App"> 
-    <Header />
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/shop" component={ShopPage} />
-      </Switch>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      currentUser: null
+    }
+  }
+
+  unsubcribeFromAuth = null;
+
+  componentDidMount(){
+    this.unsubcribeFromAuth = auth.onAuthStateChanged(user => {
+      this.setState({currentUser: user})
+
+      console.log(user);
+    })
+  }
+
+  un
+
+  render() {
+    return (
+      <div className="App"> 
+      <Header currentUser={this.state.currentUser}/>
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/shop" component={ShopPage} />
+          <Route path="/signin" component={SignInAndRegister} />
+        </Switch>
+      </div>
+    );
+  }
 }
 
 export default App;
