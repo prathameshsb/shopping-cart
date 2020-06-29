@@ -8,3 +8,7 @@ a{
     font-weight: 700;
     color: black;
 }
+
+*{
+    box-sizing: border-box;
+}
