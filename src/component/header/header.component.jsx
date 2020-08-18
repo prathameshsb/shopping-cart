@@ -16,7 +16,7 @@ import './header.style.scss';
 
 const Header = ({ currentUser, hidden }) => (
   <div className='header'>
-    <Link className='logo-container' to='/'>
+    <Link className='logo-container' to='/'>  
       <Logo className='logo' />
     </Link>
     <div className='options'>
