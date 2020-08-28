@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Working version of this project could be found on the link right below as it is hosted on Heroku - 
+https://shopping-cart-pb.herokuapp.com/
 
 ## Available Scripts
 
