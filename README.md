@@ -1,4 +1,4 @@
-<b>Working version of this project could be found on the link right below as it is hosted on Heroku - </b>
+<b>Working version of this project could be found on this link as it is hosted on Heroku - </b>
 https://shopping-cart-pb.herokuapp.com/
 
 ## Available Scripts
